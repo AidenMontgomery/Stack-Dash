@@ -1,0 +1,96 @@
+<!--
+    Source released under BSD license, copyright (c) 2010 Constructive Coding Ltd.
+    See license.txt for license.
+-->
+<html>
+<head>
+    <link rel="stylesheet" href="overflow.css" type="text/css" media="screen" charset="utf-8">
+    <script src="/System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/System/Library/WidgetResources/AppleClasses/AppleButton.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/System/Library/WidgetResources/AppleClasses/AppleAnimator.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/System/Library/WidgetResources/AppleClasses/AppleScrollbar.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/System/Library/WidgetResources/AppleClasses/AppleScrollArea.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    <script src="so.js" type="text/javascript"></script>
+    <script src="badge.js" type="text/javascript"></script>
+    <script src="badges.js" type="text/javascript"></script>
+    <script src="question.js" type="text/javascript"></script>
+    <script src="questions.js" type="text/javascript"></script>
+    <script src="answer.js" type="text/javascript"></script>
+    <script src="answers.js" type="text/javascript"></script>
+    <script src="utilityFunctions.js" type="text/javascript"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>overflow</title>
+    <meta name="author" content="Aiden Montgomery">
+    <!-- Date: 2010-04-01 -->
+    <script type="text/javascript">
+	$(function() {
+		initialise();
+	});
+	</script>
+</head>
+<body>
+    <div id="front">
+        <div id="frontContent">
+            <div id="head">
+                <div id="left">
+                    <img src="http://www.gravatar.com/avatar/" alt="Gravatar" id="gravatar">
+                    <h1 id="displayReputation">1000</h1>
+                    <h3 id="displayViewCount">100 Views</h3>
+                </div>
+                <div id="right">
+                    <img class="loader" src="common/images/ajax-loader-black.gif">
+                    <label>Name</label><span id="displayUserName">Name</span><br>
+                    <label>Location</label><span id="displayLocation">Here</span><br>
+                    <label>Website</label><a href="#" id="displayWebsite" onclick="openSite();">www.stackoverflow.com</a><br>
+                    <div id="headFooter">
+                        <div id="acceptRate">Accept Rate <span id="displayAcceptRate">100</span></div>
+                    </div>
+                    <img class="optionImage selectedOption" id="chooseSO" src="stackoverflow/images/logo.png" onclick="chooseSite('stackoverflow');" alt="Stack Overflow Logo">
+                    <img class="optionImage" id="chooseSF" src="serverfault/images/logo.png" onclick="chooseSite('serverfault');" alt="Server Fault Logo">
+                    <img class="optionImage" id="chooseSU" src="superuser/images/logo.png" onclick="chooseSite('superuser');" alt="Super User Logo">
+                </div>
+            </div>
+            <div id="footer">
+                <div class="footerItem" onclick="toggleBottomPanel('questions', loadQuestions);"><label class="big">Q</label> <span id="displayQuestionCount">0</span></div>
+                <div class="footerItem" onclick="toggleBottomPanel('answers', loadAnswers);"><label class="big">A</label> <span id="displayAnswerCount">0</span></div>
+                <div class="footerItem" onclick="toggleBottomPanel('badges', loadBadges);"><label class="big">B</label> <span id="displayBadgeCount">0</span></div>
+                <div class="footerItem" id="upVote"><img alt="Up Votes" src="stackoverflow/images/vote-arrow-up-on.png" align="absmiddle"><span id="displayUpVoteCount">0</span></div>
+                <div class="footerItem lastfooteritem" id="downVote"><img alt="Down Votes" src="stackoverflow/images/vote-arrow-down-on.png" align="absmiddle"><span id="displayDownVoteCount">0</span></div>
+            </div>
+        </div>
+        <div id="infoButton"></div>
+        <div id="outset">
+            <div id="outsetScrollArea"></div>
+            <div id="outsetScrollbar"></div>
+        </div>
+    </div>
+    <div id="back">
+        <img style="position: absolute; left: 353px; top: 27px; " onclick="goToWebSite('stackoverflow.com');" src="stackoverflow/images/logo.png" id="img">
+        <img style="position: absolute; top: 82px; left: 353px; " onclick="goToWebSite('serverfault.com');" src="serverfault/images/logo.png" id="img">
+        <img style="position: absolute; left: 353px; top: 138px; " onclick="goToWebSite('superuser.com');" src="superuser/images/logo.png" id="img">
+        <img class="loader" style="position: absolute; top: 24px; left: 330px; " src="common/images/ajax-loader-black.gif" id="img1">
+        <select id="siteToSearch">
+            <option value="stackoverflow">Stack Overflow</option>
+            <option value="serverfault">Server Fault</option>
+            <option value="superuser">Super User</option>
+        </select><br>
+        <input type="search" id="userName" placeholder="User Name" onsearch="listUsers();">
+        <div id="searchButton" apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children"></div>
+        <div id="searchResults">
+            <select id="userList">
+                <option>Select User...</option>
+            </select>
+        </div>
+        <div id="userDetails">
+            <img id="searchGravatar" src="http://www.gravatar.com/avatar/" alt="Gravatar">
+            <label>Location</label><input type="text" enabled="false" id="location" readonly="">
+            <label>Website</label><input type="text" enabled="false" id="website_url" readonly=""><br>
+            <input type="button" onclick="useSelectedUser();" value="Use Selected">
+        </div>
+        <div id="doneButton"></div>
+        <label id="aboutLabel">StackDash created by <a onclick="goToWebSite('constructivecoding.com');">Constructive Coding Ltd</a> © 2010</label>
+    </div>
+    <img id="openCategory" height="13" width="25" src="stackoverflow/images/vote-arrow-down-on.png" alt="Selected options">
+</body>
+</html>

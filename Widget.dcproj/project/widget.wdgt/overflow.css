@@ -1,0 +1,441 @@
+/*
+    Source released under BSD license, copyright (c) 2010 Constructive Coding Ltd.
+    See license.txt for license.
+*/
+
+body {
+    border-style: groove;
+    border-width: 4px;
+    border-color: black;
+    border-top-right-radius: 10px 10px;
+    border-top-left-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    width: 400px;
+    height: 200px;
+}
+
+#donebutton {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+#infobutton {
+    position: absolute;
+    top: 180px;
+    right: 30px;
+}
+
+#searchbutton {
+    position: absolute;
+    top: 45px;
+    right: 125px;
+}
+
+#front {
+    border-top-right-radius: 6px 6px;
+    border-top-left-radius: 6px 6px;
+    border-bottom-left-radius: 6px 6px;
+    border-bottom-right-radius: 6px 6px;
+    background-image: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-color: rgb(204, 204, 204);
+    display: block;
+    padding: 10px;
+    width: 380px;
+    height: 180px;
+}
+
+#back {
+    border-top-right-radius: 10px 10px;
+    border-top-left-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    background-image: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-color: rgb(204, 204, 204);
+    display: none;
+    padding: 10px;
+    width: 380px;
+    height: 180px;
+}
+
+#back label {
+    display: block;
+}
+
+#back #aboutlabel {
+    position: absolute;
+    left: 30px;
+    bottom: 10px;
+    font-size: small;
+}
+
+#back #username {
+    width: 200px;
+}
+
+#back #location {
+    width: 200px;
+}
+
+#back #website_url {
+    width: 200px;
+}
+
+#back #searchgravatar {
+    position: absolute;
+    right: 95px;
+    bottom: 40px;
+}
+
+#searchresults, #userdetails {
+    display: none;
+}
+
+#head {
+    overflow: hidden;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+
+#head #left {
+    float: left;
+    text-align: center;
+    margin-right: 4px;
+}
+
+#head #left h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+#head #left h2 {
+    font-size: medium;
+    padding: 3px;
+    margin: 0px;
+}
+
+#head #left h3 {
+    font-size: smaller;
+    padding: 0px;
+    margin: 0px;
+}
+
+#head #right label {
+    width: 60px;
+    margin: 3px;
+    display: inline-block;
+}
+
+#headfooter div {
+    display: inline-block;
+    padding-top: 5px;
+}
+
+#head .optionimage {
+    width: 30px;
+    height: 30px;
+    margin-right: 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(204, 204, 204);
+}
+
+#head .selectedoption {
+    border-style: solid;
+    border-width: 1px;
+    border-color: orange;
+}
+
+#acceptrate {
+    width: 120px;
+}
+
+#footer {
+    overflow: hidden;
+}
+
+#footer .footeritem {
+    display: inline-block;
+    width: 75px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 5px;
+    float: left;
+}
+
+.big {
+    font: normal normal normal 22px/normal bolder;
+    color: rgb(254, 122, 21);
+}
+
+.selected {
+    color: rgb(254, 122, 21);
+}
+
+.bronzebadge {
+    color: rgb(204, 153, 102);
+}
+
+.silverbadge {
+    color: rgb(192, 192, 192);
+}
+
+.goldbadge {
+    color: rgb(255, 204, 0);
+}
+
+#finduser {
+    border-style: outset;
+    -khtml-box-reflect: none;
+    background-color: rgb(192, 192, 192);
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat repeat;
+}
+
+#outset {
+    width: 380px;
+    height: 200px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-top-style: none;
+    border-top-width: initial;
+    border-top-color: initial;
+    background-image: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    -khtml-background-clip: initial;
+    -khtml-background-origin: initial;
+    background-color: grey;
+    position: absolute;
+    top: 212px;
+}
+
+.loader {
+    float: right;
+    display: none;
+    width: 0px;
+    height: 0px;
+    left: 299px;
+    top: 32px;
+}
+
+#glassbutton {
+    cursor: default;
+    -khtml-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 239px;
+    top: 33px;
+}
+
+.badge {
+    background-image: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: black;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    border-top-right-radius: 10px 10px;
+    border-top-left-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+}
+
+.badgecontainer {
+    display: inline-block;
+    margin-right: 4px;
+    padding-right: 5px;
+    background-image: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(150, 150, 150);
+    border-style: none;
+    border-width: initial;
+    border-color: initial;
+    border-top-right-radius: 10px 10px;
+    border-top-left-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+}
+
+#outsetscrollarea {
+    position: absolute;
+    top: 5px;
+    bottom: 3px;
+    left: 5px;
+    right: 22px;
+    height: 192px;
+}
+
+#outsetscrollbar {
+    position: absolute;
+    top: 5px;
+    bottom: 3px;
+    right: 2px;
+    width: 20px;
+    height: 192px;
+}
+
+.question {
+    background-image: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: white;
+    margin: 2px;
+}
+
+.answer {
+    background-image: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: white;
+    margin: 2px;
+}
+
+.item_header {
+    font-size: 10px;
+    margin-bottom: 5px;
+    padding-top: 0px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+    padding-left: 3px;
+}
+
+.item_up_votes {
+    float: right;
+}
+
+.item_down_votes {
+    float: right;
+}
+
+.item_favorite {
+    display: inline;
+    padding: 2px;
+    margin-right: 8px;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: silver;
+}
+
+.item_views {
+    display: inline;
+    padding: 2px;
+    margin-right: 8px;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: silver;
+}
+
+.item_answers {
+    display: inline;
+    padding: 2px;
+    margin-right: 8px;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: silver;
+}
+
+.item_score {
+    display: inline;
+    padding: 2px;
+    margin-right: 8px;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: silver;
+}
+
+.item_activity_date {
+    display: inline;
+    padding: 2px;
+    margin-right: 8px;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: silver;
+}
+
+.item_title {
+    margin: 0px;
+    padding-top: 0px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+#opencategory {
+    display: none;
+    position: absolute;
+    top: 190px;
+    left: 25px;
+}
+
+#apikeypass {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+}
+
+#apikeyclear {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+}
+
+#showkey {
+    position: absolute;
+    left: 234px;
+    right: 134px;
+    width: auto;
+    top: 25px;
+    bottom: -19px;
+    height: auto;
+}
+
+#showkeylabel {
+    position: absolute;
+    top: 22px;
+    left: 250px;
+}
+
+#label {
+    -khtml-margin-top-collapse: separate;
+    -khtml-margin-bottom-collapse: separate;
+    margin-top: 127px;
+    width: auto;
+    margin-right: -22px;
+    margin-left: 22px;
+    min-height: 21px;
+    height: auto;
+}
+
+#img {
+    -khtml-margin-top-collapse: separate;
+    -khtml-margin-bottom-collapse: separate;
+    height: 48px;
+    width: 49px;
+    margin-top: -3px;
+    left: 353px;
+    top: 79px;
+}
+
+#img1 {
+    width: 16px;
+    height: 16px;
+}

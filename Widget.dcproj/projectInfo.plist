@@ -21,7 +21,7 @@
 			<key>MainCSS</key>
 			<string>overflow.css</string>
 			<key>MainJS</key>
-			<string>jquery-1.4.2.min.js</string>
+			<string>so.js</string>
 			<key>ProductDir</key>
 			<string>widget.wdgt</string>
 			<key>Steps</key>

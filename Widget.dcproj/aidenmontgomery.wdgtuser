@@ -48,37 +48,37 @@
 		<string>-loadPage</string>
 		<key>widget.wdgt/questions.js:61</key>
 		<string>-scrolling</string>
-		<key>widget.wdgt/so.js:124</key>
+		<key>widget.wdgt/so.js:129</key>
 		<string>-refreshDisplay</string>
-		<key>widget.wdgt/so.js:130</key>
+		<key>widget.wdgt/so.js:135</key>
 		<string>-refreshDisplay</string>
-		<key>widget.wdgt/so.js:132</key>
+		<key>widget.wdgt/so.js:137</key>
 		<string>-refreshDisplay</string>
-		<key>widget.wdgt/so.js:133</key>
+		<key>widget.wdgt/so.js:138</key>
 		<string>-refreshDisplay</string>
-		<key>widget.wdgt/so.js:172</key>
+		<key>widget.wdgt/so.js:177</key>
 		<string>-listUsers</string>
-		<key>widget.wdgt/so.js:181</key>
+		<key>widget.wdgt/so.js:186</key>
 		<string>-listUsers</string>
-		<key>widget.wdgt/so.js:189</key>
+		<key>widget.wdgt/so.js:194</key>
 		<string>-displayUserList</string>
-		<key>widget.wdgt/so.js:198</key>
+		<key>widget.wdgt/so.js:203</key>
 		<string>-displayUserList</string>
-		<key>widget.wdgt/so.js:241</key>
+		<key>widget.wdgt/so.js:246</key>
 		<string>-showBottomPanel</string>
-		<key>widget.wdgt/so.js:270</key>
+		<key>widget.wdgt/so.js:275</key>
 		<string>-toggleBottomPanel</string>
-		<key>widget.wdgt/so.js:289</key>
+		<key>widget.wdgt/so.js:294</key>
 		<string>-loadQuestions</string>
-		<key>widget.wdgt/so.js:293</key>
+		<key>widget.wdgt/so.js:298</key>
 		<string>-loadAnswers</string>
-		<key>widget.wdgt/so.js:297</key>
+		<key>widget.wdgt/so.js:302</key>
 		<string>-loadBadges</string>
-		<key>widget.wdgt/so.js:306</key>
+		<key>widget.wdgt/so.js:311</key>
 		<string>-chooseSite</string>
-		<key>widget.wdgt/so.js:31</key>
+		<key>widget.wdgt/so.js:32</key>
 		<string>-initialise</string>
-		<key>widget.wdgt/so.js:67</key>
+		<key>widget.wdgt/so.js:70</key>
 		<string>-initialise</string>
 		<key>widget.wdgt/utilities.js:15</key>
 		<string>-padNumber</string>
@@ -206,13 +206,7 @@
 			</array>
 		</array>
 		<key>Objects view last selections</key>
-		<array>
-			<array>
-				<integer>0</integer>
-				<integer>0</integer>
-				<integer>2</integer>
-			</array>
-		</array>
+		<array/>
 		<key>Opened Steps</key>
 		<array>
 			<integer>0</integer>

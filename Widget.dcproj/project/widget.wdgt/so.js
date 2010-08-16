@@ -15,6 +15,7 @@ var bottomPanelShownBy;
 this.SuperUserLocation = "superuser";
 this.StackOverflowLocation = "stackoverflow";
 this.ServerFaultLocation = "serverfault";
+this.StackAppsLocation = "stackapps";
 
 var currentSettings;
 
@@ -34,10 +35,12 @@ function initialise() {
 		currentSettings.userNames[this.StackOverflowLocation] = widget.preferenceForKey("soUserName");
 		currentSettings.userNames[this.SuperUserLocation] = widget.preferenceForKey("suUserName");
 		currentSettings.userNames[this.ServerFaultLocation] = widget.preferenceForKey("sfUserName");
+        currentSettings.userNames[this.StackAppsLocation] = widget.preferenceForKey("saUserName");
         
 		currentSettings.userIDs[this.StackOverflowLocation] = widget.preferenceForKey("soUserID");
 		currentSettings.userIDs[this.SuperUserLocation] = widget.preferenceForKey("suUserID");
 		currentSettings.userIDs[this.ServerFaultLocation] = widget.preferenceForKey("sfUserID");
+        currentSettings.userIDs[this.StackAppsLocation] = widget.preferenceForKey("saUserID");
         currentSettings.apiKey = widget.preferenceForKey("apiKey");
 	}
 	$('#outset').slideUp();
@@ -110,9 +113,11 @@ function savePrefs() {
 		widget.setPreferenceForKey(currentSettings.userNames[this.StackOverflowLocation],"soUserName");
 		widget.setPreferenceForKey(currentSettings.userNames[this.SuperUserLocation],"suUserName");
 		widget.setPreferenceForKey(currentSettings.userNames[this.ServerFaultLocation],"sfUserName");
+        widget.setPreferenceForKey(currentSettings.userNames[this.StackAppsLocation],"saUserName");
         widget.setPreferenceForKey(currentSettings.userIDs[this.StackOverflowLocation],"soUserID");
         widget.setPreferenceForKey(currentSettings.userIDs[this.SuperUserLocation],"suUserID");
         widget.setPreferenceForKey(currentSettings.userIDs[this.ServerFaultLocation],"sfUserID");
+        widget.setPreferenceForKey(currentSettings.userIDs[this.StackAppsLocation],"saUserID");
 	}
 }
 
@@ -311,6 +316,8 @@ function chooseSite(siteChosen) {
             $("#chooseSF").addClass("selectedOption");
         } else if (siteChosen == this.SuperUserLocation) {
             $("#chooseSU").addClass("selectedOption");
+        } else if (siteChosen == this.StackAppsLocation) {
+            $("#chooseSA").addClass("selectedOption");
         }
         hideBottomPanel();
         refreshDisplay();
